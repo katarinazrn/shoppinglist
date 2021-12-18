@@ -1,0 +1,112 @@
+#new {
+  margin: 20px auto;
+  display: flex;
+}
+
+#name {
+  width: 100%;
+  font-size: 14px;
+}
+
+#price {
+  text-align: center;
+  width: 50px;
+  border: none;
+  height: 100%;
+  font-size: 14px;
+}
+
+#amount {
+  border: none;
+  text-align: center;
+  width: 30px;
+  height: 100%;
+  font-size: 14px;
+}
+
+#new button {
+  width: auto;
+  font-weight: bolder;
+  padding: 2px 15px;
+  border-radius: 0;
+  border: 2px solid var(--accent);
+  background-color: var(--accent);
+  color: var(--background);
+}
+
+#new button:hover{
+  color: var(--accent);
+  background-color: var(--background);
+}
+
+.input {
+  font-size: 14px;
+  border: 1px solid rgba(197, 209, 219, 0.541);
+}
+
+.input,
+#new button {
+  margin: 2px;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip span {
+  position: absolute;
+  z-index: 100;
+  top: 27px;
+  left: 0px;
+  padding: 4px;
+  width: 70px;
+  border-radius: 5px;
+  visibility: hidden;
+  background-color: cornflowerblue;
+  color: white;
+  text-align: center;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.164);
+}
+
+.tooltip:hover span {
+  visibility: visible;
+}
+
+#price,
+#amount::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#price,
+#amount {
+  -moz-appearance: textfield;
+}
+
+@media (max-width: 500px) {
+  #new {
+    display: block;
+  }
+
+  .input {
+    width: 100%;
+    margin: 4px 0;
+  }
+
+  #name {
+    padding: 2px 0;
+  }
+
+  #price,
+  #amount {
+    width: 100%;
+    margin: 0;
+    padding: 2px 0;
+  }
+
+  #new button {
+    width: 100%;
+    margin: 0;
+  }
+}

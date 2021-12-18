@@ -1,0 +1,86 @@
+#list{
+    margin: 0;
+    padding: 0;
+}
+
+.item{
+    border-bottom: 2px solid rgba(182, 180, 180, 0.466);
+    margin: 0;
+    width: 100%;
+    display: flex;
+    padding: 7px;
+}
+
+.item div {
+    margin-left: auto;
+}
+
+input[type='checkbox']{
+    visibility: hidden;
+}
+
+.item label{
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
+    border: 2px solid rgb(182, 179, 179);
+}
+
+#checked{
+    position: relative;
+}
+
+#checked span{
+    color: cornflowerblue;
+    z-index: 100;
+    visibility: visible;
+    position: absolute;
+    top: -9px;
+    left: -4px;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    font-size: 30px;
+}
+
+.item label span{
+    visibility: hidden;
+}
+
+.item div span{
+    margin: 0 5px;
+}
+
+#itemName{
+    overflow-x: scroll;
+    overflow-x: auto;
+}
+
+.delete{
+    border: 1px solid rgb(223, 91, 91);
+    color: rgb(223, 91, 91);
+    border-radius: 7px;
+    padding: 0 7px;
+    cursor: pointer;
+}
+
+.delete:hover{
+    background-color:rgb(223, 91, 91);
+    color: white;
+}
+
+#total{
+   text-align: right;
+   padding: 12px;
+}
+
+.empty{
+    padding: 20px;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.empty span{
+    font-size: 40px;
+    opacity: 0.5;
+}

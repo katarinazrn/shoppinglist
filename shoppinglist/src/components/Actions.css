@@ -1,0 +1,20 @@
+#actions{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#actions span{
+    color: var(--text-primary);
+    height: auto;
+    font-size: 16px;
+    padding: 0 3px;
+}
+
+#actions button{
+    font-size: 16px;
+    border: none;
+    color: var(--text-primary);
+    background-color: transparent;
+    cursor: pointer;
+}

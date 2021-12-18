@@ -1,0 +1,28 @@
+:root{
+  --background: white;
+  --text-primary: rgb(128, 126, 126);
+  --text-secondary: cornflowerblue;
+  --accent: rgb(11, 189, 50);
+}
+
+[theme='dark']{
+  --background: rgb(17, 6, 37);
+  --text-primary: rgb(252, 252, 252);
+  --text-secondary: rgb(184, 208, 253);
+  --accent: rgb(150, 235, 169);
+}
+
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+h1{
+  color: var(--text-primary);
+  text-align: center;
+}
+
+#container{
+  width: 90%;
+  margin: 0 auto;
+}
