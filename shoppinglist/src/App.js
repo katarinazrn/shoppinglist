@@ -3,13 +3,24 @@ import NewItem from './components/NewItem';
 import ItemsList from './components/ItemsList';
 import { useEffect, useState } from 'react';
 import Actions from './components/Actions';
-import ToPrint from './components/ToPrint';
 
 const App = () => {
 
   const [items, setItems] = useState([]);
   const [total, setTotal] = useState(0);
   const [undefinedPrices, setUndefinedPrices] = useState(0);
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+
+    if (localStorage.getItem('theme')) {
+      setTheme(localStorage.getItem('theme'));
+    }
+    else {
+      localStorage.setItem('theme', 'light');
+    }
+
+  }, []);
 
   useEffect(() => {
     if (localStorage.getItem('items')) {
@@ -83,14 +94,32 @@ const App = () => {
     setTotal(0);
     setUndefinedPrices(0);
   }
-  
+
+  const changeTheme = () => {
+    setTheme(prev => prev == 'dark' ? 'light' : 'dark');
+  }
+
   return (
-    <div id='container'>
-      <h1>Shopping List</h1>
-      <Actions clearAll={clearAll} />
-      <NewItem addItem={addItem} />
-      <ItemsList delete={deleteItem} total={total} toggle={toggle}
-        undefinedPrices={undefinedPrices} items={items} />
+    <div id='wrapper' theme={theme}>
+      <div id='container' >
+        <div id='theme'>
+          {theme == 'dark' ?
+            <span onClick={() => changeTheme()} className="material-icons light">
+              light_mode
+            </span>
+            :
+            <span onClick={() => changeTheme()} className="material-icons dark">
+              dark_mode
+            </span>
+          }
+        </div>
+        <h1>Shopping List</h1>
+        <Actions items={items} undefinedPrices={undefinedPrices}
+          total={total} clearAll={clearAll} />
+        <NewItem addItem={addItem} />
+        <ItemsList delete={deleteItem} total={total} toggle={toggle}
+          undefinedPrices={undefinedPrices} items={items} />
+      </div>
     </div>
   );
 }

@@ -1,12 +1,22 @@
 #listToPrint {
   width: 100%;
-  border: 2px solid black;
 }
 #listToPrint li {
   display: flex;
+  list-style: none;
+  text-align: center;
+  border-bottom: 2px solid gray;
+  padding-left: 10px;
+  margin: 5px;
 }
 
 #listToPrint li div {
   margin-left: auto;
-  border: 1px solid red;
+}
+
+#complete{
+  margin-left: 20px;
+  width: 23px;
+  height: 23px;
+  border: 2px solid gray;
 }

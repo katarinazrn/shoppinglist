@@ -10,10 +10,12 @@ const Item = props => {
                 </span>
             </label>
             <span id='itemName'>{props.item.name}</span>
-            <div>
-                {props.item.price>0 && <span>${props.item.price}</span>}
+            <div id='right'>
+                {props.item.price > 0 && <span>${props.item.price}</span>}
                 <span>x{props.item.amount}</span>
-                <span className='delete' onClick={()=>props.delete(props.item)}>delete</span>
+                <span className='material-icons delete' onClick={() => props.delete(props.item)}>
+                    delete
+                </span>
             </div>
         </div>
     )

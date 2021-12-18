@@ -32,6 +32,7 @@
   border: 2px solid var(--accent);
   background-color: var(--accent);
   color: var(--background);
+  cursor: pointer;
 }
 
 #new button:hover{

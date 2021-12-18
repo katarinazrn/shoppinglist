@@ -25,4 +25,25 @@ h1{
 #container{
   width: 90%;
   margin: 0 auto;
+  
+}
+
+#wrapper{
+  height: 100vh;
+  background-color: var(--background);
+}
+
+.light{
+  color: rgb(252, 251, 228);
+  cursor: pointer;
+}
+
+.dark{
+  color: rgb(55, 45, 112);
+  cursor: pointer;
+}
+
+#theme{
+  text-align: right;
+  padding: 10px;
 }

@@ -10,9 +10,9 @@ const ItemsList = props => {
                     <Item delete={props.delete} toggle={props.toggle} key={item.id} item={item} />
                 )}
                 {props.total > 0 &&
-                    <div id='total'>Total:
+                    <div id='total'>Total: {' '}
                         {props.undefinedPrices > 0 && ' >'}
-                        ${props.total}</div>}
+                         ${props.total.toFixed(2)}</div>}
             </ul>
         )
     else return (
@@ -20,7 +20,7 @@ const ItemsList = props => {
             <span className='material-icons'>
                 add_shopping_cart
             </span>
-            <p>No items</p>
+            <p>Add items to buy</p>
         </div>
     )
 }
