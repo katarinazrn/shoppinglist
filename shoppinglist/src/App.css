@@ -1,8 +1,8 @@
 :root{
   --background: white;
-  --text-primary: rgb(128, 126, 126);
+  --text-primary: rgb(39, 38, 38);
   --text-secondary: cornflowerblue;
-  --accent: rgb(11, 189, 50);
+  --accent: rgb(37, 143, 81);
 }
 
 [theme='dark']{

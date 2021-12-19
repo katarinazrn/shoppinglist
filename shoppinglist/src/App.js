@@ -97,6 +97,7 @@ const App = () => {
 
   const changeTheme = () => {
     setTheme(prev => prev == 'dark' ? 'light' : 'dark');
+    localStorage.setItem('theme', localStorage.getItem('theme')=='dark'? 'light':'dark');
   }
 
   return (
