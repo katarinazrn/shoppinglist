@@ -33,6 +33,9 @@ const App = () => {
           setUndefinedPrices(prev => prev + 1);
         }
       });
+
+      setTotal(t);
+      
     }
     else {
       localStorage.setItem('items', '');

@@ -3,6 +3,8 @@ import './Items.css';
 
 const ItemsList = props => {
 
+    console.log(props)
+
     if (props.items.length > 0)
         return (
             <ul id='list'>
