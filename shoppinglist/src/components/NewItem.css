@@ -5,7 +5,13 @@
 
 #name {
   width: 100%;
-  font-size: 14px;
+}
+
+#name,#price,#amount{
+  font-size: 16px;
+  padding: 5px;
+  background-color: var(--background);
+  color: var(--text-primary);
 }
 
 #price {
@@ -13,7 +19,6 @@
   width: 50px;
   border: none;
   height: 100%;
-  font-size: 14px;
 }
 
 #amount {
@@ -21,18 +26,18 @@
   text-align: center;
   width: 30px;
   height: 100%;
-  font-size: 14px;
 }
 
 #new button {
   width: auto;
   font-weight: bolder;
-  padding: 2px 15px;
   border-radius: 0;
   border: 2px solid var(--accent);
   background-color: var(--accent);
   color: var(--background);
   cursor: pointer;
+  font-size: 16px;
+  padding: 5px 15px;
 }
 
 #new button:hover{
@@ -95,15 +100,10 @@ input::-webkit-inner-spin-button {
     margin: 4px 0;
   }
 
-  #name {
-    padding: 2px 0;
-  }
-
   #price,
   #amount {
     width: 100%;
     margin: 0;
-    padding: 2px 0;
   }
 
   #new button {

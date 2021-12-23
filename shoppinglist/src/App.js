@@ -3,6 +3,8 @@ import NewItem from './components/NewItem';
 import ItemsList from './components/ItemsList';
 import { useEffect, useState } from 'react';
 import Actions from './components/Actions';
+import html2canvas from 'html2canvas';
+import Options from './components/Options';
 
 const App = () => {
 
@@ -22,6 +24,7 @@ const App = () => {
 
   }, []);
 
+
   useEffect(() => {
     if (localStorage.getItem('items')) {
       setItems(JSON.parse(localStorage.getItem('items')));
@@ -35,7 +38,7 @@ const App = () => {
       });
 
       setTotal(t);
-      
+
     }
     else {
       localStorage.setItem('items', '');
@@ -43,7 +46,6 @@ const App = () => {
     }
 
   }, [])
-
 
   const toggle = item => {
     item.isBought = !item.isBought;
@@ -98,28 +100,34 @@ const App = () => {
     setUndefinedPrices(0);
   }
 
+  const download = () => {
+    const bg = theme == 'dark' ? 'rgb(17, 6, 37)' : 'light';
+    html2canvas(document.getElementById('list'),
+      { backgroundColor: bg })
+      .then(canvas => {
+        let anchorTag = document.createElement("a");
+        document.body.appendChild(anchorTag);
+        anchorTag.download = "list.jpg";
+        anchorTag.href = canvas.toDataURL();
+        anchorTag.click();
+      });
+  }
+ 
   const changeTheme = () => {
     setTheme(prev => prev == 'dark' ? 'light' : 'dark');
-    localStorage.setItem('theme', localStorage.getItem('theme')=='dark'? 'light':'dark');
+    localStorage.setItem('theme', localStorage.getItem('theme') == 'dark' ? 'light' : 'dark');
   }
 
   return (
     <div id='wrapper' theme={theme}>
       <div id='container' >
-        <div id='theme'>
-          {theme == 'dark' ?
-            <span onClick={() => changeTheme()} className="material-icons light">
-              light_mode
-            </span>
-            :
-            <span onClick={() => changeTheme()} className="material-icons dark">
-              dark_mode
-            </span>
-          }
-        </div>
-        <h1>Shopping List</h1>
-        <Actions items={items} undefinedPrices={undefinedPrices}
-          total={total} clearAll={clearAll} />
+        <Options theme={theme}  changeTheme={changeTheme} />
+        <h1>Spisak za kupovinu </h1>
+        <Actions items={items}
+          undefinedPrices={undefinedPrices}
+          total={total}
+          clearAll={clearAll}
+          download={download} />
         <NewItem addItem={addItem} />
         <ItemsList delete={deleteItem} total={total} toggle={toggle}
           undefinedPrices={undefinedPrices} items={items} />

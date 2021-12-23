@@ -3,8 +3,6 @@ import './Items.css';
 
 const ItemsList = props => {
 
-    console.log(props)
-
     if (props.items.length > 0)
         return (
             <ul id='list'>
@@ -12,9 +10,10 @@ const ItemsList = props => {
                     <Item delete={props.delete} toggle={props.toggle} key={item.id} item={item} />
                 )}
                 {props.total > 0 &&
-                    <div id='total'>Total: {' '}
-                        {props.undefinedPrices > 0 && ' >'}
-                         ${props.total.toFixed(2)}</div>}
+                    <div id='total'>Ukupno:{' '}
+                        {props.undefinedPrices > 0 && 
+                        <span>više od {props.total.toFixed(2)} din.</span>}
+                    </div>}
             </ul>
         )
     else return (
@@ -22,7 +21,9 @@ const ItemsList = props => {
             <span className='material-icons'>
                 add_shopping_cart
             </span>
-            <p>Add items to buy</p>
+            <p>
+                Dodajte proizvode za kupovinu
+            </p>
         </div>
     )
 }

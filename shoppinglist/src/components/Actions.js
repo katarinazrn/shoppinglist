@@ -8,17 +8,19 @@ const Actions = props => {
 
     return (
         <div id='actions'>
-            <button onClick={props.clearAll}>Clear All </button>
+            <button onClick={props.clearAll}>Obriši sve </button>
             <span>|</span>
             <ReactToPrint
-                trigger={() => <button >Print</button>}
+                trigger={() => <button >Odštampaj </button>}
                 content={() => componentRef.current}
             />
             <div style={{ display: 'none' }}>
-                <ToPrint ref={componentRef} 
-                total={props.total} undefinedPrices={props.undefinedPrices} 
-                items={props.items} />
+                <ToPrint ref={componentRef}
+                    total={props.total} undefinedPrices={props.undefinedPrices}
+                    items={props.items} />
             </div>
+            <span>|</span>
+            <button onClick={props.download}>Preuzmi</button>
         </div>
     )
 }

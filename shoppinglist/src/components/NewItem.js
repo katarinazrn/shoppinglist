@@ -35,17 +35,17 @@ const NewItem = props => {
     }
 
     return (
-        <form id='new' onSubmit={handleSubmit}>
-            <input className='input' placeholder='New item...' id='name' ref={nameRef} type='text' />
+        <form id='new' onSubmit={handleSubmit}> 
+            <input className='input' placeholder='Novi proizvod...' id='name' ref={nameRef} type='text'  />
             <div className='tooltip input'>
-                <input id='price' placeholder='$0' ref={priceRef} type='number' step='.01' />
-                <span>Unit price</span>
+                <input id='price' placeholder='0 din.' ref={priceRef} type='number' step='.01' />
+                <span>Cena po jedinici</span>
             </div>
             <div className='tooltip input'>
                 <input id='amount' placeholder='x1' ref={amountRef} type='number' step='1' />
-                <span>Amount</span>
+                <span>Količina</span>
             </div>
-            <button type='submit'>Add</button>
+            <button type='submit'>Dodaj</button>
         </form>
     )
 }

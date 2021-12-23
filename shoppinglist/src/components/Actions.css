@@ -5,16 +5,17 @@
 }
 
 #actions span{
-    color: var(--text-primary);
+    color: var(--text-secondary);
     height: auto;
     font-size: 16px;
     padding: 0 3px;
 }
 
 #actions button{
-    font-size: 16px;
+    font-size: 14px;
     border: none;
-    color: var(--text-primary);
+    color: var(--text-secondary);
     background-color: transparent;
     cursor: pointer;
 }
+
