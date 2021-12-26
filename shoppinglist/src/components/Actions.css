@@ -1,7 +1,6 @@
 #actions{
     display: flex;
     justify-content: center;
-    
 }
 
 #actions span{
@@ -17,5 +16,9 @@
     color: var(--text-secondary);
     background-color: transparent;
     cursor: pointer;
+}
+
+#actions button:hover{
+    color: var(--text-primary);
 }
 

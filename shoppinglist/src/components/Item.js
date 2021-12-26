@@ -11,8 +11,8 @@ const Item = props => {
             </label>
             <span id='itemName'>{props.item.name}</span>
             <div id='right'>
-                {props.item.price > 0 && <span>{props.item.price }din.</span>} 
-                <span>X{props.item.amount}</span>
+                {props.item.price > 0 && <span>{props.item.price } din.</span>} 
+                <span>x{props.item.amount}</span>
                 <span className='material-icons delete' data-html2canvas-ignore
                     onClick={() => props.delete(props.item)}>
                     delete

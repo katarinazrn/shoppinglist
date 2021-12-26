@@ -112,7 +112,7 @@ const App = () => {
         anchorTag.click();
       });
   }
- 
+
   const changeTheme = () => {
     setTheme(prev => prev == 'dark' ? 'light' : 'dark');
     localStorage.setItem('theme', localStorage.getItem('theme') == 'dark' ? 'light' : 'dark');
@@ -120,15 +120,19 @@ const App = () => {
 
   return (
     <div id='wrapper' theme={theme}>
+      <div id='top'>
+        <div id='container' >
+          <Options theme={theme} changeTheme={changeTheme} />
+          <h1>Spisak za kupovinu </h1>
+          <Actions items={items}
+            undefinedPrices={undefinedPrices}
+            total={total}
+            clearAll={clearAll}
+            download={download} />
+          <NewItem addItem={addItem} />
+        </div>
+      </div>
       <div id='container' >
-        <Options theme={theme}  changeTheme={changeTheme} />
-        <h1>Spisak za kupovinu </h1>
-        <Actions items={items}
-          undefinedPrices={undefinedPrices}
-          total={total}
-          clearAll={clearAll}
-          download={download} />
-        <NewItem addItem={addItem} />
         <ItemsList delete={deleteItem} total={total} toggle={toggle}
           undefinedPrices={undefinedPrices} items={items} />
       </div>

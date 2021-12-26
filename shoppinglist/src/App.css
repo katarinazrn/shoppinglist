@@ -1,21 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap');
 
 :root {
   --background: white;
-  --text-primary: rgb(39, 38, 38);
-  --text-secondary: rgb(11, 148, 91);
-  --accent: rgb(37, 143, 81);
+  --background-secondary: rgb(34, 196, 155);
+  --text-primary: rgb(255, 255, 255);
+  --text-secondary: rgb(227, 240, 234);
+  --text: rgb(35, 37, 36);
+  --accent: rgb(236, 69, 69);
+  --accent-secondary: rgb(236, 69, 69);
 }
 
 [theme="dark"] {
-  --background: rgb(13, 14, 12);
-  --text-primary: rgb(232, 243, 236);
-  --text-secondary: rgb(153, 168, 201);
-  --accent: rgb(133, 160, 190);
+  --background: rgb(45, 44, 61);
+  --background-secondary: rgb(45, 44, 61);
+  --text-primary: rgb(255, 255, 255);
+  --text-secondary: rgb(97, 197, 97);
+  --text: rgb(255, 255, 255);
+  --accent: rgb(97, 197, 97);
+  --accent-secondary: rgb(252, 216, 16);
 }
 
 * {
-  font-family: "Balsamiq Sans", cursive;
+  font-family: 'Hind Siliguri', sans-serif;
   box-sizing: border-box;
 }
 
@@ -34,13 +40,18 @@ h1 {
   background-color: var(--background);
 }
 
+#top{
+  background-color: var(--background-secondary);
+  padding-bottom: 8px;
+}
+
 .light {
   color: rgb(252, 251, 228);
   cursor: pointer;
 }
 
 .dark {
-  color: rgb(55, 45, 112);
+  color: rgb(8, 5, 22);
   cursor: pointer;
 }
 

@@ -2,7 +2,6 @@ import '../App.css';
 
 const Options = props => {
     return (
-
         <div id='theme'>
             {props.theme == 'dark' ?
                 <span onClick={props.changeTheme} className="material-icons light">

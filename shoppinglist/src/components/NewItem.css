@@ -1,6 +1,6 @@
 #new {
   margin: 20px auto;
-  display: flex;
+  display: flex; 
 }
 
 #name {
@@ -11,7 +11,7 @@
   font-size: 16px;
   padding: 5px;
   background-color: var(--background);
-  color: var(--text-primary);
+  color: var(--text);
 }
 
 #price {
@@ -30,11 +30,10 @@
 
 #new button {
   width: auto;
-  font-weight: bolder;
   border-radius: 0;
   border: 2px solid var(--accent);
   background-color: var(--accent);
-  color: var(--background);
+  color: var(--text-primary);
   cursor: pointer;
   font-size: 16px;
   padding: 5px 15px;
@@ -62,16 +61,16 @@
 .tooltip span {
   position: absolute;
   z-index: 100;
-  top: 27px;
+  top: 40px;
   left: 0px;
-  padding: 4px;
-  width: 70px;
+  padding: 2px;
+  width: 100px;
   border-radius: 5px;
   visibility: hidden;
-  background-color: cornflowerblue;
-  color: white;
+  background-color: var(--text-secondary);
+  color: var(--text);
   text-align: center;
-  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.164);
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.164);
 }
 
 .tooltip:hover span {

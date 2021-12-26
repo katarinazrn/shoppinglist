@@ -12,7 +12,7 @@ const ItemsList = props => {
                 {props.total > 0 &&
                     <div id='total'>Ukupno:{' '}
                         {props.undefinedPrices > 0 && <span>više od </span>}
-                        <span> {props.total.toFixed(2)} din.</span>
+                        <span> <span id='sum'>{props.total.toFixed(2)}</span> din.</span>
                     </div>}
             </ul>
         )
